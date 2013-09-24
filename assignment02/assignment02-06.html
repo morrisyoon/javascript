@@ -1,0 +1,81 @@
+<!-- Author: Morris Yoon, Student number: A00914105, Assignment 2 -->
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Display patterns</title>
+		<style>
+			body {font:10px sans-serif;}
+		</style>
+		<script type="text/javascript">
+
+		document.write("<pre>");
+
+		// first pattern
+
+		for (var i=0;i<10;i++)
+			{
+			for (var j=0;j<=i;j++)
+			{
+				document.write("*");
+			}
+			document.write("<br />");
+		}
+
+		document.write("<br /><br />");
+
+		// second pattern
+
+		for (var i=10;i>0;i--)
+		{
+			for (var j=0;j<i;j++)
+			{
+				document.write("*");
+			}
+			document.write("<br />");
+		}
+
+		document.write("<br /><br />");
+
+
+		// third pattern
+
+		for (var i=0;i<10;i++)
+		{
+			for (var j=0;j<10;j++)
+			{
+				if (j<i) 
+					document.write(" ");
+				else
+					document.write("*");
+			}
+			document.write("<br />");
+		}
+
+		document.write("<br /><br />");
+
+
+		// fourth pattern
+
+		for (var i=9;i>=0;i--)
+		{
+			for (var j=0;j<10;j++)
+			{
+				if (j>=i) 
+					document.write("*");
+				else
+					document.write(" ");
+			}
+			document.write("<br />");
+		}
+
+		document.write("<br /><br />");
+
+
+
+		document.write("</pre>");
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
