@@ -1,0 +1,32 @@
+<!-- Author: Morris Yoon, Student number: A00914105, Assignment 2 -->
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Fuel and Mileage</title>
+		<style>
+			body {font:10px sans-serif;}
+		</style>
+		<script type="text/javascript">
+
+			var tankful = parseInt(prompt("How many tankfulls? ",""));
+			var total_fuel=0, total_mile=0;
+			
+			for (var i=1;i<=tankful;i++)
+			{
+				var fuel = parseInt(prompt("How much feul for tankfull "+i+" : ",""));
+				var mile = parseInt(prompt("How many miles for tankfull "+i+" : ",""));
+				total_fuel+=fuel;
+				total_mile+=mile;
+				document.write (i+" | Fuel : "+fuel+" | Mile : "+mile+"<br />");
+			 }
+			 
+			 
+			document.write ("====================================<br />\
+			Total | Fuel : "+total_fuel+" | Mile : "+total_mile+"<br />");
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
