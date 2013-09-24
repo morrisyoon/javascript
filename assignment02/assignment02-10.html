@@ -1,0 +1,40 @@
+<!-- Author: Morris Yoon, Student number: A00914105, Assignment 2 -->
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	<title>Biggest number</title>
+	<style>
+		body {font:10px sans-serif;}
+	</style>
+	<script type="text/javascript">
+
+		var ask = prompt("Please input one digit integer or \"done\" to break  : ","");
+		var i = 0, biggest=-9;
+		 
+		while (ask!="done")
+		{
+			i++;
+			var number = parseInt(ask);
+			 
+			if (number >9 )
+				document.write(i+" | "+number+" | biggest : "+biggest+" | This number is bigger than 9<br />");
+			else if (number <-9)
+				document.write(i+" | "+number+" | biggest : "+biggest+" | This number is smaller than -9<br />");
+			else 
+			{
+				if (number > biggest)
+					biggest = number;
+					document.write(i+" | "+number+" | biggest : "+biggest+"<br />");
+			} 
+
+			ask = prompt("Please input one digit integer or \"done\" to break : ","");
+		}
+		 
+		document.write("========================<br />The Biggest number is "+biggest+".<br />");
+
+	</script>
+	</head>
+	<body>
+	</body>
+</html>
