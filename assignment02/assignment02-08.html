@@ -1,0 +1,27 @@
+<!-- Author: Morris Yoon, Student number: A00914105, Assignment 2 -->
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Sales Income</title>
+		<style>
+			body {font:10px sans-serif;}
+		</style>
+		<script type="text/javascript">
+
+			var items = new Array(239.99,129.75,99.95,350.89);
+			var total_sales=0, total_income=200;
+			for (var i=1;i<=4;i++)
+			{ 
+				var sold = parseInt(prompt("How many item "+i+" is sold : ",""));
+				total_sales+=sold * items[i-1];
+			}
+			 
+			total_income+=total_sales*0.09;
+			document.write("Total Wage is $"+total_income.toFixed(2));
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
