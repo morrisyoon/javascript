@@ -1,0 +1,28 @@
+<!-- Author: Morris Yoon, Student number: A00914105, Assignment 2 -->
+<!doctype html>
+<html>
+	<head>
+		<meta charset="urf-8">
+		<title>Get Average</title>
+		<style>
+			body {font:10px sans-serif;}
+		</style>
+		<script type="text/javascript">
+		
+			var grades = new Array(56,45,78,96,83,67,42,88,67,79);
+			var sum=0;
+			var average=0;
+			
+			for (var i=0;i<grades.length;i++)
+			{
+				sum+=grades[i];
+				document.write((i+1)+" | "+grades[i]+"<br />");
+			}
+
+			average=(sum / grades.length).toFixed(2);
+			document.write("===============================<br />Average is "+average);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
