@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Assignment1 - 19 </title>
+		<script type="text/javascript">
+		
+		var accountNumber, balancePrevious, totalCharge, totalPayment, creditLimit, currentDeptbalance, leftoverCredit;
+		
+		accountNumber = window.prompt("Please input your account number : ");
+			document.write("Account Number :"+accountNumber+"<br />");
+			
+		balancePrevious = parseInt(window.prompt("Please input your previous balance : "));
+			document.write("previous balance :  :"+balancePrevious+"<br />");
+			
+		totalCharge = parseInt(window.prompt("Please input your total charges : "));
+			document.write("total charges :  :"+totalCharge+"<br />");
+			
+		totalPayment = parseInt(window.prompt("Please input your total payment : "));
+			document.write("total payment :  :"+totalPayment+"<br />");
+			
+		creditLimit = parseInt(window.prompt("Please input your credit limit : "));
+			document.write("credit limit :  :"+creditLimit+"<br />");
+		
+		currentDeptbalance=balancePrevious+totalCharge-totalPayment;
+		leftoverCredit=currentDeptbalance-creditLimit;
+		
+		if (leftoverCredit >0) 
+			document.write("<br />Your leftover credit is :"+leftoverCredit+"<br />");
+		
+	
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

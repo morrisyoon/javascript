@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Assignment1 - 18 </title>
+		<script type="text/javascript">
+		
+		var fulltank, fuel, mile, average;
+		var total_fuel, total_mile;
+		
+		fulltank=parseInt(window.prompt("Please input the number of full tanks :",""));
+		
+		total_fuel=0;
+		total_mile=0;
+		
+		for (var i=1;i<=fulltank;i++)
+		{
+		fuel=parseFloat(window.prompt("Please input the gallons of fuel for the number " +i+" :",""));
+		mile=parseFloat(window.prompt("Please input the gallons of fuel for the number " +i+" :",""));
+		
+		total_fuel+=fuel;
+		total_mile+=mile;
+		
+		average=(mile/fuel).toFixed(2); 
+		
+		document.write(i+" | fuel :"+fuel+" | miles : "+mile+" | average : "+average+"<br />");
+		}
+		
+		
+		average=(total_mile/total_fuel).toFixed(2);
+		
+		document.write("<br />Total | fuel :"+total_fuel+" | miles : "+total_mile+" | average : "+average+"<br />");
+	
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

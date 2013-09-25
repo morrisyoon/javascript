@@ -1,0 +1,40 @@
+<!-- Author: Morris Yoon, Student number: A00914105, Assignment 1 -->
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Assignment1 - 9 </title>
+		<script type="text/javascript">
+		
+			var firstName;
+			var lastName;
+			var fullName;
+			var nickName;
+			
+			function ask_name() {
+			
+			firstName=window.prompt("please enter your first name:","");
+			lastName=window.prompt("please enter your last name:","");
+			fullName=firstName + "." + lastName;
+			}
+			
+			function ask_nickname() {
+			
+			nickName=window.prompt("please enter your nickname:","");
+			
+			document.writeln("<p>Oh, your name is <u>"+fullName+"</u>, and your nick is <u>"+nickName+"</u>!</p>");
+			
+			}
+			
+			
+
+
+		</script>
+	</head>
+	<body>
+	<form> 
+	<p><input type=button value="Input your name" onclick="ask_name()"></p>
+	<p><input type=button value="Input your nickname" onclick="ask_nickname()"></p>
+	</form>
+	</body>
+</html>

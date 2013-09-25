@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Assignment1 - 21 </title>
+		<script type="text/javascript">
+		
+		var numberEmployee, name, payRate, workHour, payment   ;
+		
+		numberEmployee=parseInt(window.prompt("Please input the number of employees : ",""));
+				
+		for (var i=1;i<=numberEmployee;i++)
+		{
+			
+			name=window.prompt("("+i+"/"+numberEmployee+") employee's name: ","");		
+			payRate=parseFloat(window.prompt("("+i+"/"+numberEmployee+") "+name+"'s pay rate : ",""));
+			workHour=parseFloat(window.prompt("("+i+"/"+numberEmployee+") "+name+"'s worked hour : ",""));
+		
+			payment=payRate*workHour;
+			
+			if (workHour >40) 
+				payment +=payRate*(workHour-40)*.5;
+			
+			
+			document.write(i+" | "+name+" | pay rate : "+payRate+" | hour : "+workHour+" | payment : "+payment+"<br />");
+		}
+		
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

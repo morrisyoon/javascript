@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Assignment1 - 20 </title>
+		<script type="text/javascript">
+		
+		var itemAmount, basePay, salesAmount, totalSales, commition, commitionRate, totalPay ;
+		
+		itemAmount=parseInt(window.prompt("Please input the sales item amounts : ",""));
+		basePay=parseFloat(window.prompt("Please input the base pay : ",""));
+		
+		totalSales=0;
+		
+		for (var i=1;i<=itemAmount;i++)
+		{
+		salesAmount=parseFloat(window.prompt("Please input the sales amount " +i+" : ",""));
+		
+		totalSales += salesAmount;
+		
+		
+		document.write(i+" | sales : "+salesAmount+"<br />");
+		}
+		
+		if (totalSales>5000) 
+			commitionRate=0.2;
+		else
+			commitionRate=0.1;
+		
+		commition=totalSales*commitionRate;
+		totalPay=basePay+commition;
+			
+		document.write("<br />total sales : "+totalSales+" | base pay : "+basePay+" | commitions : "+commition.toFixed(2)+" | total payment : <b>"+totalPay.toFixed(2)+"</b><br />");
+	
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
