@@ -1,0 +1,127 @@
+<!-- Author: Morris Yoon, Student number: A00914105, Assignment 3 -->
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>perfect number, prime number</title>
+		<style>
+			body {font:10px sans-serif;}
+		</style>
+		<script type="text/javascript">
+
+			function perfect(num){
+				var half=Math.round(num/2);
+				var total=0;
+				var factors=" | the factor : ";
+				for (var i=1;i<=half;i++){
+
+					if (!(num%i))
+					{
+						total+=i;
+						factors+=', '+i;
+					}
+
+
+				}
+				if (total==num) 
+					return factors;
+				else
+					return false; 
+			}
+
+			function prime(num){
+				var result=true;
+				var half=Math.round(num/2);
+				if (num!=1) {
+
+					for (var i=2;i<=half;i++){
+						if (!(num%i))
+						{	
+							if (num!=i)
+								result=false;
+							break;
+						}
+
+
+
+					}
+				}
+
+					return result; 
+			}
+			
+
+			function prime_sqrt(num) {
+				var result=true;
+				var squareroot=Math.sqrt(num);
+				if (num!=1) {
+
+					for (var i=2;i<=squareroot;i++){
+						if (!(num%i))
+						{	
+							if (num!=i)
+								result=false;
+							break;
+						}
+
+
+
+					}
+				}
+
+					return result; 
+			}
+
+			function run_perfect(){
+				
+				document.forms[0].result_area.value="Perfect numbers and their factors:\n";
+
+				for (var i=1;i<=10000;i++) {
+					if (perfect(i))
+						document.forms[0].result_area.value+=i+perfect(i)+"\n";
+				}			
+
+			}
+
+			function run_prime(){
+				
+				document.forms[0].result_area.value="Prime numnbers : \n";
+				
+				var count=0;
+
+				for (var i=1;i<=10000;i++) {
+					if (prime(i))	
+					{
+						count++
+						document.forms[0].result_area.value+=count+" | "+i+"\n";
+					}
+				}	
+			}
+			
+			function run_prime_sqrt(){
+				
+				document.forms[0].result_area.value="Prime numnbers (using Math.sqrt) : \n";
+				
+				var count=0;
+
+				for (var i=1;i<=10000;i++) {
+					if (prime_sqrt(i))	
+					{
+						count++
+						document.forms[0].result_area.value+=count+" | "+i+"\n";
+					}
+				}	
+			}
+
+
+		</script>
+	</head>
+	<body>
+		<form>
+		<textarea name="result_area" width=500 height=200></textarea><br /><br />
+		<input type="button" value="Perfect Number" onclick="run_perfect()" />
+		<input type="button" value="Prime Number" onclick="run_prime()" />
+		<input type="button" value="Prime Number(SQRT)" onclick="run_prime_sqrt()" />
+		</form> 
+	</body>
+</html>
