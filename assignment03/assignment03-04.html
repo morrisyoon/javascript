@@ -10,8 +10,8 @@
 		<script type="text/javascript">
 			function integerPower(){
 
-				var base=document.forms[0].num1.value;	
-				var exponent=document.forms[0].num2.value;
+				var base=document.getElementById('number1').value;	
+				var exponent=document.getElementById('number2').value;
 
 				var result = base;
 				for (var i=1;i<exponent;i++){
@@ -25,8 +25,8 @@
 	</head>
 	<body>
 		<form>
-			base : <input type="text" name="num1" /><br />
-			exponent : <input type="text" name="num2" /><br />
+			base : <input id="number1" type="text" name="num1" /><br />
+			exponent : <input id="number2" type="text" name="num2" /><br />
 			<input type="button" value="calculate!" onclick="integerPower()" />
 		</form>
 	</body>
