@@ -12,7 +12,7 @@
 				var number=Math.floor(Math.random()*1000)+1;
 
 			function guess(){
-				var answer=document.forms[0].guess_number.value;
+				var answer=document.getElementById('guessNumber').value;
 
 
 				if (answer>number){
@@ -23,7 +23,7 @@
 				}
 				else {
 					alert("Congratulations! You guessed the number!");	
-					document.forms[0].guess_number.value="";
+					document.getElementById('guessNumber').value="";
 					number=Math.floor(Math.random()*1000)+1;
 				}
 			}
@@ -33,7 +33,7 @@
 	</head>
 	<body>
 		<form>
-			<input type="text" name="guess_number" />
+			<input id="guessNumber" type="text" name="guess_number" />
 			<input type="button" value="Check!" onclick="guess()" />
 		</form>
 	</body>
