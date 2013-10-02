@@ -1,0 +1,31 @@
+<!-- Author: Morris Yoon, Student number: A00914105, Assignment 3 -->
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Check Even (using sentinel controlled loop)</title>
+		<style>
+			body {font:10px sans-serif;}
+		</style>
+		<script type="text/javascript">
+			function isEven(num){
+
+					return !(num%2);	
+			}
+
+				var number=parseInt(prompt("Please input an integer :"));	
+
+				while (number)    // loop before user inputs 0
+				{
+					if (isEven(number))
+						alert(number+" is a Even Number!");
+					else 
+						alert(number+" is NOT a Even Number!");
+					number=parseInt(prompt("Please input an integer Or input 0 to break:"));	
+				}
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
