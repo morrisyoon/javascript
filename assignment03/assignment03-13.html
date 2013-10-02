@@ -1,0 +1,41 @@
+<!-- Author: Morris Yoon, Student number: A00914105, Assignment 3 -->
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>great common divisor</title>
+		<style>
+			body {font:10px sans-serif;}
+		</style>
+		<script type="text/javascript">
+
+			function gcd(num1,num2){
+				var smaller=num1;
+					if (num2<num1)
+						smaller=num2;
+				var half=Math.floor(smaller/2);
+				var result=1;
+				if (smaller>1){
+					for (var i=2;i<=half;i++)
+					{
+						if (!(num1%i) && !(num2%i))
+							result=i;
+					}
+				}
+				return result;
+			}
+
+			function start(){
+
+			var number1=parseInt(prompt("Please input an integer 1 : ",""));
+			var number2=parseInt(prompt("Please input an integer 2 : ",""));
+
+			alert ("You entered the number "+number1+" and "+number2+"\n and the great common divisor is " + gcd(number1,number2));
+			}
+
+			start();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
