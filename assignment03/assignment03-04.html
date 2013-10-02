@@ -1,0 +1,33 @@
+<!-- Author: Morris Yoon, Student number: A00914105, Assignment 3 -->
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>IntegerPower</title>
+		<style>
+			body {font:10px sans-serif;}
+		</style>
+		<script type="text/javascript">
+			function integerPower(){
+
+				var base=document.forms[0].num1.value;	
+				var exponent=document.forms[0].num2.value;
+
+				var result = base;
+				for (var i=1;i<exponent;i++){
+					result*=base;
+				}	
+				alert("The result is "+result+"!");
+			}
+
+
+		</script>
+	</head>
+	<body>
+		<form>
+			base : <input type="text" name="num1" /><br />
+			exponent : <input type="text" name="num2" /><br />
+			<input type="button" value="calculate!" onclick="integerPower()" />
+		</form>
+	</body>
+</html>
