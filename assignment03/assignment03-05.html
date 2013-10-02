@@ -1,0 +1,31 @@
+<!-- Author: Morris Yoon, Student number: A00914105, Assignment 3 -->
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Check multiple</title>
+		<style>
+			body {font:10px sans-serif;}
+		</style>
+		<script type="text/javascript">
+			function checkMultiple(number1,number2){
+
+				
+				if (number2%number1){
+					alert(number2+" is NOT the multiple of "+number1+"!");
+				}
+				else {
+					alert(number2+" is the multiple of "+number1+"!");
+				}
+			}
+
+		</script>
+	</head>
+	<body>
+		<form>
+			number1 : <input type="text" name="num1" /><br />
+			number2 : <input type="text" name="num2" /><br />
+			<input type="button" value="calculate!" onclick="checkMultiple(num1.value,num2.value)" />
+		</form>
+	</body>
+</html>
