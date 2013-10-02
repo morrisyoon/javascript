@@ -1,0 +1,36 @@
+<!-- Author: Morris Yoon, Student number: A00914105, Assignment 3 -->
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>temperature celsius fahrenheit</title>
+		<style>
+			body {font:10px sans-serif;}
+		</style>
+		<script type="text/javascript">
+
+			function celsius(){
+				
+				var fah_degree =parseFloat(prompt("Please input Fahrenheit degrees: ",""));
+				var cel_degree = 5.0/9.0*(fah_degree-32);
+
+				alert ("Fahrenheit "+fah_degree.toFixed(2)+" is equal to Celsius "+cel_degree.toFixed(2));
+
+			}
+
+			function fahrenheit(num){
+				var cel_degree =parseFloat(prompt("Please input Celsius degrees: ",""));
+				var fah_degree = 9.0/5.0*cel_degree+32;
+
+				alert ("Celsius "+cel_degree.toFixed(2)+" is equal to Fahrenheit "+fah_degree.toFixed(2));
+			}
+
+		</script>
+	</head>
+	<body>
+		<form>
+			<input type="button" value="C->F" onclick="celsius()" />
+			<input type="button" value="F->C" onclick="fahrenheit()" />
+		</form>
+	</body>
+</html>
