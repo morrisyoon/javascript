@@ -1,0 +1,45 @@
+<!-- Author: Morris Yoon, Student number: A00914105, Assignment 4 -->
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>printed numbers</title>
+		<style>
+			body {font:10px sans-serif;}
+		</style>
+		<script type="text/javascript">
+
+			var number=new Array;
+
+			for (var i=0;i<20;i++){
+				number[i]=Math.round(Math.random()*90)+10;
+			}
+
+			var printed=1;
+			document.write(number[0]+"<br />");
+			for (i=1;i<number.length;i++){
+				var sw=1;
+				for (j=0;j<i;j++){
+					if(number[i]==number[j]){
+						sw=0;
+					}
+				}
+				if (sw) {
+
+					document.write(number[i]+"<br />");
+					printed++;
+				}
+			}
+
+
+					document.write("printed numbers are "+printed+"<br />");
+
+					if (printed==20)
+					document.write("Worst Case");
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
+
