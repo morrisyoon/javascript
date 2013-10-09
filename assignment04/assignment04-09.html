@@ -1,0 +1,75 @@
+<!-- Author: Morris Yoon, Student number: A00914105, Assignment 4 -->
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>sales  </title>
+		<style>
+			body {font:10px sans-serif;}
+		</style>
+		<script type="text/javascript">
+
+			var sales=new Array();
+			var slips=new Array();
+
+			for (var i=0;i<4;i++){
+					sales[i]=new Array();
+				for (var j=0;j<5;j++){
+					sales[i][j]=0;
+				}
+			}														//set sales array to 0
+
+			for (var i=0;i<100;i++){
+				var salesPerson=Math.floor(Math.random()*4);
+				var productNumber=Math.floor(Math.random()*5);
+				var sold=Math.floor(Math.random()*9)+1;
+				slips[i]=[salesPerson,productNumber,sold];	
+				document.write("slip No."+i+" | Employee No."+salesPerson+" | product No."+productNumber+" | Sold amount : "+sold+"<br />" );
+																			//create slips
+			}  
+
+			for (var i=0;i<100;i++){
+				sales[slips[i][0]][slips[i][1]]+=slips[i][2];			//add each slips to sales array
+			}  
+
+
+			document.write("<br /><br /><br /><table border=\"1\"><tr><td></td>");
+			for(var j=0; j<sales[0].length;j++){
+
+			document.write("<td>product "+(j+1)+"</td>");
+			}
+
+			document.write("<td>total</td></tr>");
+
+			var grossTotal=0;
+			for (var i=0; i<sales.length;i++){
+				var total=0;
+				document.write("<tr><td>Employee "+(i+1)+"</td>");
+				for(var j=0; j<sales[i].length;j++){
+					document.write("<td>"+sales[i][j]+"</td>");
+					total+=sales[i][j];
+
+				}
+				grossTotal+=total;
+				document.write("<td>"+total+"</td></tr>");
+			}
+
+				document.write("<tr><td>total</td>");	
+
+			for (var i=0; i<sales[0].length;i++){
+				var total=0;
+				for(var j=0; j<sales.length;j++){
+					total+=sales[j][i];
+				}
+				document.write("<td>"+total+"</td>");
+			}
+
+				document.write("<td>"+grossTotal+"</tr></table>");			
+
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
+
