@@ -1,0 +1,40 @@
+<!-- Author: Morris Yoon, Student number: A00914105, Assignment 4 -->
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>prime numbers (with array)</title>
+		<style>
+			body {font:10px sans-serif;}
+		</style>
+		<script type="text/javascript">
+
+		var prime=new Array;
+
+		for (var i=0;i<1000;i++){
+			prime[i]=1;
+		}
+
+		for(var i=2;i<1000;i++){
+			if (prime[i]) {
+				var multiple=2;
+				while((prime[i]*multiple)<1000){
+					prime[i*multiple]=0;
+					multiple++;
+				}
+			}
+		}
+
+		for(var i=1;i<1000;i++){
+			if (prime[i]){
+				document.write(i+"<br />");
+			}
+		}
+
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
+
