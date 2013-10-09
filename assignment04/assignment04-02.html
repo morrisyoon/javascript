@@ -1,0 +1,65 @@
+<!-- Author: Morris Yoon, Student number: A00914105, Assignment 4 -->
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>total pay ranges</title>
+		<style>
+			body {font:10px sans-serif;}
+		</style>
+		<script type="text/javascript">
+
+			var grossSales=[2000,3000,4000,5000,6000,7000,8000,9000,10000];
+			var range=[0,0,0,0,0,0,0,0,0]
+
+			for (var i=0;i<grossSales.length;i++){
+				totalPay=200+grossSales[i]*.09;
+
+				if (totalPay>=1000){
+					range[8]++;
+				}
+				else if (totalPay>=900){
+					range[7]++;
+				}
+				else if (totalPay>=800){
+					range[6]++;
+				}
+				else if (totalPay>=700){
+					range[5]++;
+				}
+				else if (totalPay>=600){
+					range[4]++;
+				}
+				else if (totalPay>=500){
+					range[3]++;
+				}
+				else if (totalPay>=400){
+					range[2]++;
+				}
+				else if (totalPay>=300){
+					range[1]++;
+				}
+				else {
+					range[0]++;
+				}
+
+				document.write((i+1)+" | gross sale : "+grossSales[i]+" | "+Math.round(totalPay)+"<br />");
+			}
+
+			
+				document.write( "200~299 : "+range[0]+"<br />");
+				document.write( "300~399 : "+range[1]+"<br />");
+				document.write( "400~499 : "+range[2]+"<br />");
+				document.write( "500~599 : "+range[3]+"<br />");
+				document.write( "600~699 : "+range[4]+"<br />");
+				document.write( "700~799 : "+range[5]+"<br />");
+				document.write( "800~899 : "+range[6]+"<br />");
+				document.write( "900~999 : "+range[7]+"<br />");
+				document.write( "1000~ : "+range[8]+"<br />");
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
+
