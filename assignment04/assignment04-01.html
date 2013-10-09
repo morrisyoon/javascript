@@ -1,0 +1,147 @@
+<!-- Author: Morris Yoon, Student number: A00914105, Assignment 4 -->
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Array</title>
+		<style>
+			body {font:10px sans-serif;}
+		</style>
+		<script type="text/javascript">
+
+			var f=new Array(1,2,3,4,5,6,7,8);
+			document.write(f[7]+"<br />"); 		//a
+
+			var g=new Array(8,8,8,8,8); 		//b
+
+			var c=new Array();
+			for (var i=0;i<100;i++){
+				c[i]=Math.round(Math.random()*100);
+				document.write(i+" | "+c[i]+"<br />");
+			}
+
+			var total=0;
+			for(i=0;i<c.length;i++){
+				total+=c[i];
+			}
+
+				document.write("total | "+total+"<br />");		//c
+
+
+			var f=new Array(1,2,3,4,5,6,7,8,9,10,11);
+			var g=new Array();
+			g[33]=33;
+
+			for (i=0;i<f.length;i++){
+				g[i]=f[i];										
+			}
+
+
+			for (i=0;i<g.length;i++){
+				document.write(i+" | "+g[i]+"<br />");						//d
+			}
+
+			var w=new Array();
+			for (var i=0;i<100;i++){
+				w[i]=Math.random();
+				document.write(i+" | "+w[i]+"<br />");
+			}
+
+			w.sort();
+			document.write("smallest number is : "+w[0]+"<br />"); 		//e
+
+			var t=[1,2];
+			t[0]=[1,2,3];
+			t[1]=[4,5,6];
+
+			alert(t.length);				 		//f
+
+			var t= new Array();				 		//g
+
+			/* h, i, j
+
+			 the maximum length of an array according to the ECMA-262 5th Edition specification is bound by an unsigned 32-bit integer due to the ToUint32 abstract operation, so the longest possible array could have 232-1 = 4,294,967,295 = 4.29 billion elements.
+
+			 */
+
+			t=[1,2];
+			t[0]=[1,2,3];
+			t[1]=[4,5,6];
+
+			document.write("second row elements of t are : "+t[1]+"<br />");					//k
+			document.write("third column elements of t are : "+t[0][2]+", "+t[1][2]+"<br />");	//l
+
+			t[1][2]=0;																			//m
+
+			t[0]=[0,0,0];
+			t[1]=[0,0,0];
+
+			document.write(t[0]+"<br />"+t[1]+"<br />");										//n(?)
+
+			t[0]=[1,2,3];
+			t[1]=[4,5,6];
+
+			for (var i=0; i<t.length;i++){
+				for(var j=0; j<t[i].length;j++){
+					t[i][j]=0;
+				}
+			}
+			document.write(t[0]+"<br />"+t[1]+"<br />");										//o
+
+
+			t[0]=[2,3,1];
+			t[1]=[6,4,5];
+
+
+			var smallest;
+			for (var i=0; i<t.length;i++){
+				t[i].sort();
+				if ((!smallest)||(smallest>t[i][0])){
+					smallest=t[i][0];
+				}
+			}
+			document.write(t[0]+"<br />"+t[1]+"<br />");
+			document.write("smallest number is "+smallest+"<br />");							//p	
+
+
+			document.write(t[0]+"<br />");														//q
+
+
+			t=[1,2,3];
+			t[0]=[1,2,3,4];
+			t[1]=[4,5,6,7];
+			t[2]=[8,9,10,11];
+
+			var total=0;
+			for (var i=0; i<t.length;i++){
+				total+=t[i][3];
+			}
+			document.write("Total is "+total+"<br />");											//r	
+
+
+
+			document.write("<table border=\"1\"><tr><td></td>");
+			for(var j=0; j<t[0].length;j++){
+
+			document.write("<td>"+j+"</td>");
+			}
+
+			document.write("</tr>");
+
+			for (var i=0; i<t.length;i++){
+
+				document.write("<tr><td>"+i+"</td>");
+				for(var j=0; j<t[i].length;j++){
+					document.write("<td>"+t[i][j]+"</td>");
+				}
+
+				document.write("</tr>");
+			}
+				document.write("</table>");														//s
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
+
