@@ -1,0 +1,72 @@
+<!-- Author: Morris Yoon, Student number: A00914105, Assignment 4 -->
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Tortoise and Hare</title>
+		<style>
+			body {font:10px sans-serif;}
+		</style>
+		<script type="text/javascript">
+
+			var position=new Array();
+
+			for (var i=0;i<70;i++){
+				position[i]="_";
+			}														//set sales array to _
+
+			var hare=0;
+			var tortoise=0;
+			while ((hare<70) && (tortoise<70)) {
+			position[tortoise]="_";
+			position[hare]="_";
+			var hareMove=Math.random()*10;
+			var TortoiseMove=Math.random()*10;
+			if (hareMove>8) 
+				hare-=2;
+			else if (hareMove>5)
+				hare++;		
+			else if (hareMove>4)
+				hare-=12;
+			else if (hareMove>2)
+				hare+=9;		
+			else {}
+			if (hare<0) hare=0;
+
+			if (TortoiseMove>7)
+				tortoise++;
+			else if (TortoiseMove>5)
+				tortoise-=2;		
+			else {tortoise+=3;}
+			if (tortoise<0) tortoise=0;
+
+			if (tortoise==hare) {
+				position[tortoise]="O";
+			}
+			else {
+				position[tortoise]="T";
+				position[hare]="H";
+			}
+			for(i=0;i<70;i++){
+				document.write(position[i]);
+			}
+
+			document.write("<br />");
+
+			if (tortoise>=70) {
+				document.write("<br /><br />Tortoise Wins!!<br />");
+				exit;
+			}
+			if (hare>=70) {
+				document.write("<br /><br />Hare Wins!!<br />");
+				exit;
+			}
+			}
+
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
+
