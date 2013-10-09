@@ -1,0 +1,63 @@
+<!-- Author: Morris Yoon, Student number: A00914105, Assignment 4 -->
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>airline reservation </title>
+		<style>
+			body {font:10px sans-serif;}
+		</style>
+		<script type="text/javascript">
+
+			var seats=new Array();
+			var count, first, economy;
+
+			function init_seats(){			
+			seats=[0,0,0,0,0,0,0,0,0,0];
+			count=0;
+			first=0;
+			economy=0;
+
+			}
+
+			init_seats();
+			var fclass=prompt("Please type 1 for first class and type 2 for economy class","");
+
+			while(fclass!="3"){
+				if (fclass=="1"){
+					if (first<5){
+						seats[first]=1;
+						first++;
+						count++;
+						document.write("Fist Class - Seat No." + first+"<br />");
+					}
+					else {
+						var ask=prompt("Please answer if you are acceptable in the economy section (y or n) :");
+						if (ask=="n") {
+							alert("next flight leaves in 3 hours");
+						}
+						else fclass="2";
+					}
+				}
+				if (fclass=="2") {
+					if (economy!=5){
+						seats[(5+economy)]=1;
+						economy++;
+						count++;
+						document.write("Economy Class - Seat No." + (5+economy)+"<br />");
+					}
+
+				}
+
+				if (count>=10){
+					init_seats();
+				}
+				fclass=prompt("Please type 1 for first class and type 2 for economy class","");
+			}
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
+
